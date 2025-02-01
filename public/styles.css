@@ -1,4 +1,12 @@
+@font-face {
+  font-family: "Figtree";
+  src: url("./Figtree-VariableFont_wght.woff2") format("woff2-variations"),
+  url("./Figtree-Regular.woff2") format("woff2");
+  font-weight: normal; font-style: normal;
+}
+
 body {
-    color: red;
-  }
-  
+  background-color: #1c1c1c;
+  color: #e6e6e6;
+  font-family: Figtree;
+}
