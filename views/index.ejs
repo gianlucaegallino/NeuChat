@@ -6,6 +6,15 @@
   </head>
   <body>
     <%- include('header') %>
-    <h1>Index todo!</h1>
+    <main>
+      <h2><%= title %></h2>
+      <ul>
+        <% messages.map((message) => { %>
+          <li><%= message.user %> at <%= message.added %>: <%= message.text %></li>
+        <% }) %>
+      </ul>
+      
+      <a href="/new">Add new Message!</a>
+    </main>
   </body>
 </html>
