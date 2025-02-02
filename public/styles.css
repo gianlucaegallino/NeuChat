@@ -1,8 +1,10 @@
 @font-face {
   font-family: "Figtree";
+  font-style: normal;
+  font-weight: normal;
+
   src: url("./Figtree-VariableFont_wght.woff2") format("woff2-variations"),
-  url("./Figtree-Regular.woff2") format("woff2");
-  font-weight: normal; font-style: normal;
+    url("./Figtree-Regular.woff2") format("woff2");
 }
 
 body {
@@ -11,13 +13,84 @@ body {
   font-family: Figtree;
 }
 
-.form{
+.form {
+  align-items: center;
   display: flex;
   flex-direction: column;
   width: 800px;
-  align-items: center;
 }
-.row{
+.row {
   display: flex;
   flex-direction: column;
+}
+
+.neuctr {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(auto-fill, minmax(292px, 1fr));
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.neu {
+  background-color: #1c1c1c;
+  border: 1px solid #13131320;
+  border-radius: 30px;
+  box-shadow: #44444480 -6px -6px 16px, #00000080 6px 6px 16px;
+}
+
+.card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  max-width: 250px;
+  min-width: 250px;
+
+}
+
+.line {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+a.button {
+  background-color: #3d3d3d;
+  border: none;
+  border-radius: 10px;
+  color: #e6e6e6;
+  padding: 10px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  width: 200px;
+}
+
+a.button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+button {
+  background-color: #3d3d3d;
+  border: none;
+  border-radius: 10px;
+  color: #e6e6e6;
+  padding: 10px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  width: 200px;
+}
+
+button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.text{
+  width: 100%;
 }

@@ -8,13 +8,22 @@
     <%- include('header') %>
     <main>
       <h2><%= title %></h2>
-      <ul>
+
+      <div class="neuctr">
         <% messages.map((message) => { %>
-          <li><%= message.user %> at <%= message.added %>: <%= message.text %></li>
+        <div class="neu card">
+          <div class="line">
+            <p><%= message.user %></p>
+            <p><%= message.added %></p>
+          </div>
+          <p class="text"><%= message.text %></p>
+
+          <button>Details</button>
+        </div>
         <% }) %>
-      </ul>
-      
-      <a href="/new">Add new Message!</a>
+      </div>
+
+      <a  class="button" href="/new">Add new Message!</a>
     </main>
   </body>
 </html>
