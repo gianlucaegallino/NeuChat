@@ -22,11 +22,18 @@ indexRouter.get("/", (req, res) =>
 
 indexRouter.get("/new", (req, res) => res.render("form", {}));
 
+indexRouter.post("/info", (req, res) => {
+  let index = req.body.index;
+  let message = messages[index];
+  res.render("info", {message: message});
+});
+
+
 indexRouter.post("/new", (req, res) => {
   let name = req.body.name;
   let text = req.body.text;
 
-  messages.push({ text: text, user:name, added: new Date().toLocaleString("en-GB") });
+  messages.unshift({ text: text, user:name, added: new Date().toLocaleString("en-GB"),});
   res.redirect("/");
 });
 

@@ -6,6 +6,6 @@
     "express-async-handler": "^1.2.0"
   },
   "scripts": {
-    "watch": "node --watch app.js"
+    "watch": "node --watch *"
   }
 }

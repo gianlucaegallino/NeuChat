@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Info</title>
+    <link rel="stylesheet" href="/normalize.css" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <%- include('header') %>
+    <main>
+      <div class="mainarea">
+        <div class="infoctr">
+          <p class="extra">User: <%= message.user %></p>
+          <p class="extra">Message: <%= message.added %></p>
+          <p class="extra">Text: <%= message.text %></p>
+        </div>
+      </div>
+      <a class="button" href="/new">Add new Message!</a>
+    </main>
+  </body>
+</html>

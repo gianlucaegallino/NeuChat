@@ -6,24 +6,30 @@
   </head>
   <body>
     <%- include('header') %>
+
     <main>
-      <h2><%= title %></h2>
-
-      <div class="neuctr">
-        <% messages.map((message) => { %>
-        <div class="neu card">
-          <div class="line">
-            <p><%= message.user %></p>
-            <p><%= message.added %></p>
+      <div class="mainarea">
+        <h2><%= title %></h2>
+        <div class="neuctr">
+          <% let counter = 0; messages.map((message) => { %>
+          <div class="neu card">
+            <div class="line">
+              <p><%= message.user %></p>
+              <p><%= message.added %></p>
+            </div>
+            <p class="text"><%= message.text %></p>
+            <form method="POST" action="/info" class="center">
+              <button type="submit" name="index" value=<%= counter %>>
+                Details
+              </button>
+            </form>
+            <% counter++%>
           </div>
-          <p class="text"><%= message.text %></p>
-
-          <button>Details</button>
+          <% }) %>
         </div>
-        <% }) %>
       </div>
 
-      <a  class="button" href="/new">Add new Message!</a>
+      <a class="button" href="/new">Add new Message!</a>
     </main>
   </body>
 </html>

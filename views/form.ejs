@@ -6,18 +6,19 @@
   </head>
   <body>
     <%- include('header') %>
-    <h1>New Message</h1>
-    <form method="POST" action="/new" class="form">
-      <label class="row">
-        Name
-        <input type="text"  name = "name" placeholder="Name" />
-      </label>
-
-      <label class="row">
-        Message
-        <input type="text" name = "text" placeholder="Message" />
-      </label>
-      <button>Submit</button>
-    </form>
+    <div class="formarea">
+      <h1>New Message</h1>
+      <form method="POST" action="/new" class="form">
+        <label class="row">
+          Name *
+          <input type="text"  name = "name" placeholder="Name" maxlength="16" required/>
+        </label>
+        <label class="row">
+          Message *
+          <input type="text" name = "text" placeholder="Message" required/>
+        </label>
+        <button class="button2">Submit</button>
+      </form>
+    </div>
   </body>
 </html>
