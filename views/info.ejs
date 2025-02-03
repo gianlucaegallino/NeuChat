@@ -8,10 +8,11 @@
     <%- include('header') %>
     <main>
       <div class="mainarea">
+        
         <div class="infoctr">
-          <p class="extra">User: <%= message.user %></p>
-          <p class="extra">Message: <%= message.added %></p>
-          <p class="extra">Text: <%= message.text %></p>
+          <p class="extra">User: <%= message.name %></p>
+          <p class="extra">Date: <%= message.added %></p>
+          <p class="extra">Message: <%= message.text %></p>
         </div>
       </div>
       <a class="button" href="/new">Add new Message!</a>

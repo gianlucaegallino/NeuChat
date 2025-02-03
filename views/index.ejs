@@ -11,21 +11,22 @@
       <div class="mainarea">
         <h2><%= title %></h2>
         <div class="neuctr">
-          <% let counter = 0; messages.map((message) => { %>
+          <% 
+          for (let i = messages.length-1; i >= 0; i--){
+           %>
           <div class="neu card">
             <div class="line">
-              <p><%= message.user %></p>
-              <p><%= message.added %></p>
+              <p><%= messages[i].name %></p>
+              <p><%= messages[i].added %></p>
             </div>
-            <p class="text"><%= message.text %></p>
+            <p class="text"><%= messages[i].text %></p>
             <form method="POST" action="/info" class="center">
-              <button type="submit" name="index" value=<%= counter %>>
+              <button type="submit" name="id" value=<%= messages[i].id %>>
                 Details
               </button>
             </form>
-            <% counter++%>
           </div>
-          <% }) %>
+          <% } %>
         </div>
       </div>
 
