@@ -10,12 +10,6 @@ CREATE TABLE IF NOT EXISTS messages (
   text VARCHAR ( 255 ), 
   added VARCHAR ( 100 )
 );
-
-INSERT INTO messages (name, text, added) 
-VALUES
-  ('Bryan', 'Wow, this looks good!', 'testDate'),
-  ('James', 'nice', 'testDate'),
-  ('tester', 'finished testing!', 'testDate');
 `;
 
 async function main() {
